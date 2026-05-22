@@ -1,4 +1,4 @@
-name: Deploy Jekyll to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,25 +6,18 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
+      - uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
+          bundler-cache: true
 
-      - name: Install dependencies
-        run: |
-          gem install jekyll bundler
-          bundle install
-
-      - name: Build site
+      - name: Build the site
         run: bundle exec jekyll build
 
       - name: Deploy
