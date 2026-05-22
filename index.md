@@ -2,20 +2,32 @@
 layout: home
 ---
 
-# Welcome to My Homepage
+<div class="hero">
+    <h1>Welcome to My World</h1>
+    <p>Exploring the intersection of art, technology, and creativity. Join me on this journey of discovery.</p>
+    <button class="btn" onclick="scrollToFeatures()">Discover More</button>
+</div>
 
-Hi, I'm Ros258! This is my personal homepage built with Jekyll.
+<div id="features" class="features">
+    <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>Creative Design</h3>
+        <p>Beautiful, modern designs that capture attention and inspire emotion. Every pixel tells a story.</p>
+    </div>
+    <div class="card">
+        <div class="card-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Clean, efficient code that powers seamless digital experiences across all devices.</p>
+    </div>
+    <div class="card">
+        <div class="card-icon">✨</div>
+        <h3>Innovation</h3>
+        <p>Pushing boundaries and exploring new possibilities in the digital landscape.</p>
+    </div>
+</div>
 
-## About Me
-
-I'm learning web development and exploring Jekyll for creating static websites.
-
-## Projects
-
-- Project 1
-- Project 2
-- Project 3
-
-## Contact
-
-You can reach me through GitHub.
+<script>
+    function scrollToFeatures() {
+        document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
