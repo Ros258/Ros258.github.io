@@ -2,6 +2,4 @@ title: Ros258's Homepage
 description: Personal homepage of Ros258
 baseurl: ""
 url: "https://Ros258.github.io"
-theme: minima
-plugins:
-  - jekyll-feed
+permalink: /:year/:month/:day/:title/
